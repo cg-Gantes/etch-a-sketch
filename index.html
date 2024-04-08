@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <aside>
+      <header>
+        <h1>ETCH-A-SKETCH</h1>
+        <p>Type a value for Grid Size:</p>
+        <input type="number" id="quantity" min="16" max="100" />
+        <button class="reset">Reset</button>
+      </header>
+      <section class="color-picker">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <main class="right">
+        <div class="gridContainer"></div>
+      </main>
+    </aside>
+    <script src="./main.js"></script>
+  </body>
 </html>
