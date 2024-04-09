@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <aside>
-      <header>
-        <h1>ETCH-A-SKETCH</h1>
-        <p>Type a value for Grid Size:</p>
-        <input type="number" id="quantity" min="16" max="100" />
-        <button class="reset">Reset</button>
-      </header>
-      <section class="color-picker">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
-      <main class="right">
-        <div class="gridContainer"></div>
-      </main>
-    </aside>
-    <script src="./main.js"></script>
+    <div class="flex-container">
+      <div class="title"><h1>SketchPad</h1></div>
+      <div class="mode">Mode: Coloring</div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button class="blackButton" onclick="changeColor('black')">Black</button>
+          <button class="erasorButton" onclick="changeColor('white')">Eraser</button>
+          <button class="grayButton" onclick="changeColor('gray')">Gray</button>
+          <button class="randomButton" onclick="changeColor('random')">Random</button>
+          <button onclick="resetBoard()">Reset</button>
+        </div>
+        <div>
+          <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)" />
+          <button>Set Size</button>
+        </div>
+        <div class="error">Input must be between 2 and 100</div>
+      </div>
+    </div>
   </body>
+  <script src="main.js"></script>
 </html>
